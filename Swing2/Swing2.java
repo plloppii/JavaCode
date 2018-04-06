@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class Swing2 extends JFrame{
 
-	JButton button; //WTFFFFFlololol
+	JButton button; 
 	JTextField textField; //DEFINED AS GLOBAL VARIABLES SO ALL SUBCLASSES CAN SEE.
 	JTextArea textArea;
 	int buttonClicked;
