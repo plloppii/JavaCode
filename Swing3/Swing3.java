@@ -22,7 +22,7 @@ public class Swing3 extends JFrame{
 	double number1, number2, totalCalc;
 
 	public Swing3(){
-		this.setSize(400,400);
+		this.setSize(600,400);
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("Swing3");
@@ -85,8 +85,8 @@ public class Swing3 extends JFrame{
 		howManyTimes.setPaintTicks(true);
 		howManyTimes.setPaintLabels(true);
 
-		//ListenForSlider listen1 = new ListenForSlider();
-		//howManyTimes.addChangeListener(listen1);
+		ListenForSlider listen1 = new ListenForSlider();
+		howManyTimes.addChangeListener(listen1);
 		thePanel.add(howManyTimes);
 
 		textField1.requestFocus();
@@ -137,6 +137,8 @@ public class Swing3 extends JFrame{
 			}
 		}
 	}
+
+
 	private static double addNumbers( double num1, double num2, int times){
 		double sum=0;
 		for(int i=times;i>=0;i--){
@@ -172,13 +174,17 @@ public class Swing3 extends JFrame{
 		}
 		return quo;
 	}
-/*
+
 	private class ListenForSlider implements ChangeListener{
-
-
+		public void stateChanged(ChangeEvent e){
+			if(e.getSource()==howManyTimes){
+				label2.setText("Perform How Many Times: " + howManyTimes.getValue());
+				
+			}
+		}
 	}
 
-*/
+
 	public static void main(String[] args){
 		new Swing3();
 	}
