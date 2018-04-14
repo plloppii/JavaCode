@@ -32,7 +32,9 @@ public class Swing4 extends JFrame{
 		favoriteMovies.setFixedCellHeight(30);
 		favoriteMovies.setFixedCellWidth(150);
 		favoriteMovies.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION); //multiple interval selection
+		
 		String[] colors = {"Black","Blue","White","Green","Orange","Grey"};
+		
 		for(String color: colors){
 			defListModel.addElement(color);
 		}
