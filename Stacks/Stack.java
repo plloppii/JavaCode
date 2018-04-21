@@ -29,6 +29,13 @@ public class Stack{
 
 	}
 
+	public void pushmany(String many){
+		String[] nums = many.split(" ");
+		for(int i = 0;i<nums.length;i++){
+			this.push(nums[i]);
+		}
+	}
+
 	public String pop(){
 		if(topofstack>=0){
 			displayTheStack();
@@ -46,10 +53,17 @@ public class Stack{
 
 	public String peek(){
 		displayTheStack();
-		System.out.println("PEEK"+stackArray[topofstack]+" Is at the Top of the Stack\n");
+		System.out.println("PEEK "+stackArray[topofstack]+" Is at the Top of the Stack\n");
 
 		return stackArray[topofstack];
 	}
+
+	public void popAll(){
+		for(int i=topofstack;i>=0;i--){
+			pop();
+		}
+	}
+
 
 	public void displayTheStack(){
 		for(int n=0;n<61;n++)System.out.print("-");
@@ -80,12 +94,19 @@ public class Stack{
 
 	public static void main(String[] args){
 		Stack mystack = new Stack(10);
-		mystack.displayTheStack();
-		mystack.push("10");
 		mystack.push("18");
 		mystack.push("20");
 
-		mystack.peek();
+		//mystack.pushmany("9 2 3 4 1 3");
+
+		//mystack.popAll();
+
+		mystack.displayTheStack();
+
+
+
+
+		//mystack.peek();
 	}
 
 
